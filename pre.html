@@ -1,0 +1,1380 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ahmad Khan | Full-Stack Developer</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="potfolio.css" />
+    <style>
+      #downloadBtn.disabled {
+  pointer-events: none;
+  opacity: 0.7;
+}
+      .stack{
+        height: 50px;
+      }
+      .card{
+        box-shadow: 5px 5px 10px 2px rgba(50, 237, 206, 0.904);
+      }
+    .ball{
+      box-shadow: 5px 5px 10px 2px rgba(50, 237, 206, 0.904);
+    }
+/* Particles Container */
+.particles-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1; /* Keep behind content */
+  pointer-events: none; /* Ignore mouse events */
+  overflow: hidden;
+}
+
+/* Gold Particles */
+.gold-particle {
+  position: absolute;
+  width: 5px;
+  height: 5px;
+  background-color: rgb(62, 5, 248);
+  border-radius: 50%;
+  box-shadow: 0 0 10px rgb(5, 233, 245);
+  animation: float-up 10s linear infinite;
+}
+
+/* Animation */
+@keyframes float-up {
+  0% {
+    transform: translateY(100vh) translateX(calc(100vw * var(--random-x)));
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-10vh) translateX(calc(100vw * var(--random-x)));
+    opacity: 0;
+  }
+}
+/* Skills Section Styles */
+.skill-category-card {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    padding: 30px;
+    height: 100%;
+    transition: transform 0.3s ease;
+}
+
+.skill-category-card:hover {
+    transform: translateY(-5px);
+}
+
+.skill-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 25px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid rgba(13, 110, 253, 0.1);
+}
+
+.skill-icon {
+    font-size: 2rem;
+    color: #0d6efd;
+    background: rgba(13, 110, 253, 0.1);
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    margin-right: 20px;
+}
+
+.skill-title {
+    font-size: 1.5rem;
+    color: #0d6efd;
+    margin: 0;
+}
+
+.skill-subtitle {
+    font-size: 1.1rem;
+    color: #495057;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+
+.skill-item {
+    margin-bottom: 15px;
+}
+
+.skill-badge {
+    display: flex;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
+.skill-tech-icon {
+    font-size: 1.2rem;
+    color: #0d6efd;
+    margin-right: 10px;
+}
+
+.skill-bar {
+    height: 8px;
+    background: #e9ecef;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.skill-progress {
+    height: 100%;
+    background: linear-gradient(90deg, #0d6efd, #6ea8fe);
+    border-radius: 4px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .skills-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .skill-header {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .skill-icon {
+        margin-right: 0;
+        margin-bottom: 15px;
+    }
+}.typewriter-cursor {
+  opacity: 1;
+  animation: blink 0.7s infinite;
+  font-weight: bold;
+  margin-left: 2px;
+}
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+      .shining-text {
+            font-weight: bold;
+            position: relative;
+            color: white(255, 255, 255, 0.3);
+            
+            
+            text-shadow: 0 0 10px rgba(51, 51, 51, 0.2);
+            animation: glow 8s ease-in-out infinite;
+        }
+
+        .shining-text::before {
+            content: attr(data-text);
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            color: rgb(250, 245, 245);
+            overflow: hidden;
+            white-space: nowrap;
+            background: linear-gradient(90deg, transparent, rgb(160, 159, 159), transparent);
+            background-size: 200% 100%;
+            background-repeat: no-repeat;
+            -webkit-background-clip: text;
+            background-clip: text;
+            animation: shine 3s ease-in-out infinite;
+            filter: drop-shadow(0 0 10px rgba(251, 235, 235, 0.8));
+        }
+
+        @keyframes shine {
+            0% { background-position: -150% 0; }
+            100% { background-position: 150% 0; }
+        }
+
+        @keyframes glow {
+            0%, 100% { opacity:0.6; }
+            50% { opacity: 1; }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            .shining-text::before, .shining-text {
+                animation: none !important;
+            }
+            .shining-text { color: rgb(247, 10, 10); }
+        }
+        .card:hover{
+          transform: translateY(-40px);
+          transition: all 1.5s ease-in-out;
+        }
+       .hello {
+    font-size: 15px; 
+    transition: all 2s ease-in-out; 
+    display: inline-block;
+}
+
+.hello:hover {
+    text-decoration: underline;
+    font-size: 25px; 
+    transform: translateY(-7px);
+    background-color: white;
+    border-radius: 20px;
+}
+   .ahmad {
+    font-size: 20px; 
+    transition: all 2s ease-in-out; 
+    display: inline-block;
+}
+
+.ahmad:hover {
+    text-decoration: underline;
+    font-size: 30px; 
+    transform: translateY(-7px);
+    background-color: rgb(216, 214, 224);
+    padding: 1rem;
+    border-radius: 20px;
+}
+.jadoon{
+  box-shadow: 0 4px 20px rgba(0, 0, 255, 2);
+}
+
+    </style>
+  </head>
+  <body data-bs-spy="scroll" data-bs-target=".navbar">
+    <!-- Back to Top Button -->
+    <a href="#" class="back-to-top"><i class="bi bi-arrow-up"></i></a>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+      <div class="container">
+        <a class="navbar-brand fw-bold text-primary text-shadow ahmad" href="#home">
+          AHMAD KHAN
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div
+          class="collapse navbar-collapse justify-content-end"
+          id="navbarNav"
+        >
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link active text-primary text-shadow  hello" href="#home"
+                >Home</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-primary text-shadow hello" href="#skills"
+                >Skills</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-primary text-shadow hello" href="#education"
+                >Education</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-primary text-shadow hello" href="#services"
+                >Services</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-primary text-shadow hello" href="#testimonials"
+                >Testimonials</a
+              >
+            </li>
+            <li class="nav-item ms-lg-3">
+              <a class="btn btn-outline-primary rounded-pill" href="#contact"
+                >Contact</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="d-flex align-items-center">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-lg-6 d-flex flex-column justify-content-center">
+            <h1 class="display-4 fw-bold mb-4 text-white">
+              Hi, I'm <span class="text-primary text-shadow">Ahmad Khan</span>
+            </h1>
+            <div class="stack"><h1 class="fullstack text-white-50">FULL STACK DEVELOPER</h1></div>
+            <p class="lead mb-4 text-white text-shadow shiner shining-text data-text="Shine Bright">
+              I build exceptional digital experiences with modern web
+              technologies. With 2+ years of experience in React.js, Node.js,
+              and MongoDB, I create responsive, performant, and user-friendly
+              applications.
+            </p>
+
+            <!-- Social Icons -->
+            <div class="d-flex gap-3 mb-4">
+              <a
+                href="https://github.com/ahmadjadoon740"
+                target="_blank"
+                class="social-icon"
+                ><i class="bi bi-github"></i
+              ></a>
+              <a
+                href="https://www.linkedin.com/in/ahmad-khan-6521aa31b/"
+                target="_blank"
+                class="social-icon"
+                ><i class="bi bi-linkedin"></i
+              ></a>
+              <a
+                href="https://web.facebook.com/profile.php?id=61572371151403"
+                target="_blank"
+                class="social-icon"
+                ><i class="bi bi-facebook"></i
+              ></a>
+              <a
+                href="http://tiktok.com/@ahmadjadoon17"
+                target="_blank"
+                class="social-icon"
+                ><i class="bi bi-tiktok"></i
+              ></a>
+              <a href="mailto:ak2085532@gmail.com" class="social-icon"
+                ><i class="bi bi-google"></i
+              ></a>
+            </div>
+
+            <!-- Buttons -->
+            <div class="d-flex flex-wrap gap-3">
+              <a href="#contact" class="btn btn-primary rounded-pill px-4">
+                Hire Me <i class="bi bi-arrow-right ms-2"></i>
+              </a>
+              <a href="#" id="downloadBtn" class="btn btn-outline-primary rounded-pill px-4">
+                Download CV <i class="bi bi-download ms-2"></i>
+              </a>
+            </div>
+          </div>
+
+          <div class="col-lg-6 mt-5 ">
+            <div class="position-relative">
+              <img
+                src="profile-pic (3).png"
+                alt="Ahmad Khan"
+                class="img-fluid rounded-circle jadoon"
+                style="max-width: 500px; height:500px"
+              />
+              <div
+                class="position-absolute bottom-0 start-0 bg-primary text-white p-3 rounded shadow"
+              >
+                <div class="d-flex align-items-center">
+                  <div class="me-3">
+                    <i class="bi bi-award-fill fs-3"></i>
+                  </div>
+                  <div>
+                    <h6 class="mb-0">2+ Years</h6>
+                    <small class="text-white-50">Experience</small>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills Section -->
+    <!-- Skills Section -->
+<section id="skills" class="bg-light py-5">
+  <div class="container">
+    <h1 class="text-center section-title text-primary mb-5">Technical Skills</h1>
+    
+    <div class="row">
+      <!-- Frontend Skills -->
+      <div class="col-lg-6 mb-5  ">
+        <div class="skill-category-card card">
+          <div class="skill-header">
+            <i class="bi bi-code-square skill-icon"></i>
+            <h3 class="skill-title">Frontend Development</h3>
+          </div>
+          
+          <div class="skill-group">
+            <h4 class="skill-subtitle">Languages</h4>
+            <div class="skills-grid">
+              <div class="skill-item">
+                <div class="skill-badge">
+                  <i class="bi bi-filetype-html skill-tech-icon"></i>
+                  <span>HTML5</span>
+                </div>
+                <div class="skill-bar">
+                <div class="progress" role="progressbar" aria-label="Animated striped example" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">
+  <div class="progress-bar progress-bar-striped progress-bar-animated" style="width: 100%"></div>
+</div>
+                </div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-badge">
+                  <i class="bi bi-filetype-css skill-tech-icon"></i>
+                  <span>CSS3</span>
+                </div>
+                <div class="skill-bar">
+                 <div class="progress" role="progressbar" aria-label="Animated striped example" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">
+  <div class="progress-bar progress-bar-striped progress-bar-animated" style="width: 90%"></div>
+</div>
+                </div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-badge">
+                  <i class="bi bi-filetype-js skill-tech-icon"></i>
+                  <span>JavaScript</span>
+                </div>
+                <div class="skill-bar">
+                <div class="progress" role="progressbar" aria-label="Animated striped example" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
+  <div class="progress-bar progress-bar-striped progress-bar-animated" style="width: 75%"></div>
+</div>
+                </div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-badge">
+                  <i class="bi bi-filetype-tsx skill-tech-icon"></i>
+                  <span>TypeScript</span>
+                </div>
+                <div class="skill-bar">
+                  <div class="progress" role="progressbar" aria-label="Animated striped example" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100">
+  <div class="progress-bar progress-bar-striped progress-bar-animated" style="width: 70%"></div>
+</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="skill-group">
+            <h4 class="skill-subtitle">Frameworks & Libraries</h4>
+            <div class="skills-grid">
+              <div class="skill-item">
+                <div class="skill-badge">
+                  <i class="bi bi-react skill-tech-icon"></i>
+                  <span>React.js</span>
+                </div>
+                <div class="skill-bar">
+                 <div class="progress" role="progressbar" aria-label="Animated striped example" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
+  <div class="progress-bar progress-bar-striped progress-bar-animated" style="width: 75%"></div>
+</div>
+                </div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-badge">
+                  <i class="bi bi-lightning-charge skill-tech-icon"></i>
+                  <span>Next.js</span>
+                </div>
+                <div class="skill-bar">
+                <div class="progress" role="progressbar" aria-label="Animated striped example" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
+  <div class="progress-bar progress-bar-striped progress-bar-animated" style="width: 75%"></div>
+</div>
+                </div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-badge">
+                  <i class="bi bi-boxes skill-tech-icon"></i>
+                  <span>Redux</span>
+                </div>
+                <div class="skill-bar">
+                 <div class="progress" role="progressbar" aria-label="Animated striped example" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100">
+  <div class="progress-bar progress-bar-striped progress-bar-animated" style="width: 65%"></div>
+</div>
+                </div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-badge">
+                  <i class="bi bi-diagram-3 skill-tech-icon"></i>
+                  <span>React Router</span>
+                </div>
+                <div class="skill-bar">
+                  <div class="progress" role="progressbar" aria-label="Animated striped example" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
+  <div class="progress-bar progress-bar-striped progress-bar-animated" style="width: 75%"></div>
+</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Backend Skills -->
+      <div class="col-lg-6 mb-5">
+        <div class="skill-category-card card">
+          <div class="skill-header">
+            <i class="bi bi-server skill-icon"></i>
+            <h3 class="skill-title">Backend Development</h3>
+          </div>
+          
+          <div class="skill-group">
+            <h4 class="skill-subtitle">Languages & Frameworks</h4>
+            <div class="skills-grid">
+              <div class="skill-item">
+                <div class="skill-badge">
+                  <i class="bi bi-node-plus skill-tech-icon"></i>
+                  <span>Node.js</span>
+                </div>
+                <div class="skill-bar">
+                  <div class="progress" role="progressbar" aria-label="Animated striped example" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
+  <div class="progress-bar progress-bar-striped progress-bar-animated" style="width: 75%"></div>
+</div>
+                </div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-badge">
+                  <i class="bi bi-filetype-json skill-tech-icon"></i>
+                  <span>Express.js</span>
+                </div>
+                <div class="skill-bar">
+                  <div class="progress" role="progressbar" aria-label="Animated striped example" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
+  <div class="progress-bar progress-bar-striped progress-bar-animated" style="width: 75%"></div>
+</div>
+                </div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-badge">
+                  <i class="bi bi-filetype-py skill-tech-icon"></i>
+                  <span>Python</span>
+                </div>
+                <div class="skill-bar">
+                  <div class="progress" role="progressbar" aria-label="Animated striped example" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
+  <div class="progress-bar progress-bar-striped progress-bar-animated" style="width: 75%"></div>
+</div>
+                </div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-badge">
+                  <i class="bi bi-filetype-java skill-tech-icon"></i>
+                  <span>Java</span>
+                </div>
+                <div class="skill-bar">
+                  <div class="progress" role="progressbar" aria-label="Animated striped example" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
+  <div class="progress-bar progress-bar-striped progress-bar-animated" style="width: 75%"></div>
+</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="skill-group">
+            <h4 class="skill-subtitle">Databases</h4>
+            <div class="skills-grid">
+              <div class="skill-item">
+                <div class="skill-badge">
+                  <i class="bi bi-database skill-tech-icon"></i>
+                  <span>MongoDB</span>
+                </div>
+                <div class="skill-bar">
+                 <div class="progress" role="progressbar" aria-label="Animated striped example" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
+  <div class="progress-bar progress-bar-striped progress-bar-animated" style="width: 75%"></div>
+</div>
+                </div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-badge">
+                  <i class="bi bi-table skill-tech-icon"></i>
+                  <span>MySQL</span>
+                </div>
+                <div class="skill-bar">
+                 <div class="progress" role="progressbar" aria-label="Animated striped example" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
+  <div class="progress-bar progress-bar-striped progress-bar-animated" style="width: 75%"></div>
+</div>
+                </div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-badge">
+                  <i class="bi bi-database-check skill-tech-icon"></i>
+                  <span>PostgreSQL</span>
+                </div>
+                <div class="skill-bar">
+                 <div class="progress" role="progressbar" aria-label="Animated striped example" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
+  <div class="progress-bar progress-bar-striped progress-bar-animated" style="width: 75%"></div>
+</div>
+                </div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-badge">
+                  <i class="bi bi-fire skill-tech-icon"></i>
+                  <span>Firebase</span>
+                </div>
+                <div class="skill-bar">
+                 <div class="progress" role="progressbar" aria-label="Animated striped example" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
+  <div class="progress-bar progress-bar-striped progress-bar-animated" style="width: 75%"></div>
+</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Additional Skills -->
+    <div class="row">
+      <div class="col-12 ball">
+        <div class="skill-category-card">
+          <div class="skill-header">
+            <i class="bi bi-tools skill-icon"></i>
+            <h3 class="skill-title">Additional Skills</h3>
+          </div>
+          
+          <div class="row">
+            <div class="col-md-4">
+              <div class="skill-group">
+                <h4 class="skill-subtitle">Testing</h4>
+                <div class="skills-grid">
+                  <div class="skill-item">
+                    <div class="skill-badge">
+                      <i class="bi bi-check-circle skill-tech-icon"></i>
+                      <span>Jest</span>
+                    </div>
+                    <div class="skill-bar">
+                      <div class="progress" role="progressbar" aria-label="Animated striped example" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
+  <div class="progress-bar progress-bar-striped progress-bar-animated" style="width: 75%"></div>
+</div>
+                    </div>
+                  </div>
+                  <div class="skill-item">
+                    <div class="skill-badge">
+                      <i class="bi bi-check-all skill-tech-icon"></i>
+                      <span>Mocha</span>
+                    </div>
+                    <div class="skill-bar">
+                     <div class="progress" role="progressbar" aria-label="Animated striped example" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
+  <div class="progress-bar progress-bar-striped progress-bar-animated" style="width: 75%"></div>
+</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div class="col-md-4">
+              <div class="skill-group">
+                <h4 class="skill-subtitle">APIs</h4>
+                <div class="skills-grid">
+                  <div class="skill-item">
+                    <div class="skill-badge">
+                      <i class="bi bi-plug skill-tech-icon"></i>
+                      <span>RESTful APIs</span>
+                    </div>
+                    <div class="skill-bar">
+                      <div class="progress" role="progressbar" aria-label="Animated striped example" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
+  <div class="progress-bar progress-bar-striped progress-bar-animated" style="width: 75%"></div>
+</div>
+                    </div>
+                  </div>
+                  <div class="skill-item">
+                    <div class="skill-badge">
+                      <i class="bi bi-diagram-2 skill-tech-icon"></i>
+                      <span>GraphQL</span>
+                    </div>
+                    <div class="skill-bar">
+                      <div class="progress" role="progressbar" aria-label="Animated striped example" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
+  <div class="progress-bar progress-bar-striped progress-bar-animated" style="width: 75%"></div>
+</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div class="col-md-4">
+              <div class="skill-group">
+                <h4 class="skill-subtitle">DevOps</h4>
+                <div class="skills-grid">
+                  <div class="skill-item">
+                    <div class="skill-badge">
+                      <i class="bi bi-box-seam skill-tech-icon"></i>
+                      <span>Docker</span>
+                    </div>
+                    <div class="skill-bar">
+                     <div class="progress" role="progressbar" aria-label="Animated striped example" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
+  <div class="progress-bar progress-bar-striped progress-bar-animated" style="width: 75%"></div>
+</div>
+                    </div>
+                  </div>
+                  <div class="skill-item">
+                    <div class="skill-badge">
+                      <i class="bi bi-cloud skill-tech-icon"></i>
+                      <span>AWS</span>
+                    </div>
+                    <div class="skill-bar">
+                    <div class="progress" role="progressbar" aria-label="Animated striped example" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
+  <div class="progress-bar progress-bar-striped progress-bar-animated" style="width: 75%"></div>
+</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+    <!-- Education Section -->
+    <section id="education" class="education-section">
+      <div class="container mt-5">
+        <h1 class="text-center section-title text-primary">Education</h1>
+
+        <div class="row g-4">
+          <div class="col-md-4">
+            <div class="card service-card h-100">
+              <div class="card-body text-center">
+                <div class="mb-4">
+                  <i class="bi bi-mortarboard-fill text-primary fs-1"></i>
+                </div>
+                <h3 class="h4 card-title text-primary">SCHOOL</h3>
+                <p class="card-text">
+                  <strong>St. Mary's Cambridge School</strong><br />
+                  Matriculation (Cambridge System)<br />
+                  <span class="text-muted">2010 - 2021</span>
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="card service-card h-100">
+              <div class="card-body text-center">
+                <div class="mb-4">
+                  <i class="bi bi-book-fill text-primary fs-1"></i>
+                </div>
+                <h3 class="h4 card-title text-primary">COLLEGE</h3>
+                <p class="card-text">
+                  <strong>Superior Group of Colleges</strong><br />
+                  Intermediate (Computer Science)<br />
+                  <span class="text-muted">2022 - 2024</span>
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="card service-card h-100">
+              <div class="card-body text-center">
+                <div class="mb-4">
+                  <i class="bi bi-building-fill text-primary fs-1"></i>
+                </div>
+                <h3 class="h4 card-title text-primary">UNIVERSITY</h3>
+                <p class="card-text">
+                  <strong>FAST University</strong><br />
+                  BS Software Engineering<br />
+                  <span class="text-muted">2024 - Present</span>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services">
+      <div class="container mt-5">
+        <h1 class="text-center section-title text-primary">Services</h1>
+
+        <div class="row g-4">
+          <div class="col-lg-6">
+            <div class="card service-card h-100">
+              <div class="card-body">
+                <div class="d-flex align-items-center mb-3">
+                  <div class="bg-primary bg-opacity-10 p-3 rounded me-3">
+                    <i class="bi bi-code-slash text-primary fs-4"></i>
+                  </div>
+                  <h3 class="h4 mb-0 text-primary">Web Development</h3>
+                </div>
+                <p class="card-text">
+                  I create responsive, high-performance websites and web
+                  applications using modern technologies:
+                </p>
+                <ul class="list-unstyled">
+                  <li class="mb-2">
+                    <i class="bi bi-check-circle-fill text-primary me-2"></i>
+                    Frontend: React.js, HTML5, CSS3, JavaScript
+                  </li>
+                  <li class="mb-2">
+                    <i class="bi bi-check-circle-fill text-primary me-2"></i>
+                    Backend: Node.js, Express.js, MongoDB
+                  </li>
+                  <li class="mb-2">
+                    <i class="bi bi-check-circle-fill text-primary me-2"></i>
+                    UI/UX focused development
+                  </li>
+                  <li>
+                    <i class="bi bi-check-circle-fill text-primary me-2"></i>
+                    Responsive & mobile-first design
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-6">
+            <div class="card service-card h-100">
+              <div class="card-body">
+                <div class="d-flex align-items-center mb-3">
+                  <div class="bg-primary bg-opacity-10 p-3 rounded me-3">
+                    <i class="bi bi-layout-wtf text-primary fs-4"></i>
+                  </div>
+                  <h3 class="h4 mb-0 text-primary">Figma to Code</h3>
+                </div>
+                <p class="card-text">
+                  I convert your Figma designs into clean, efficient, and
+                  maintainable code:
+                </p>
+                <ul class="list-unstyled">
+                  <li class="mb-2">
+                    <i class="bi bi-check-circle-fill text-primary me-2"></i>
+                    Pixel-perfect implementation
+                  </li>
+                  <li class="mb-2">
+                    <i class="bi bi-check-circle-fill text-primary me-2"></i>
+                    Responsive across all devices
+                  </li>
+                  <li class="mb-2">
+                    <i class="bi bi-check-circle-fill text-primary me-2"></i>
+                    Using Bootstrap or Tailwind CSS
+                  </li>
+                  <li>
+                    <i class="bi bi-check-circle-fill text-primary me-2"></i>
+                    Optimized for performance
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-6">
+            <div class="card service-card h-100">
+              <div class="card-body">
+                <div class="d-flex align-items-center mb-3">
+                  <div class="bg-primary bg-opacity-10 p-3 rounded me-3">
+                    <i class="bi bi-phone-fill text-primary fs-4"></i>
+                  </div>
+                  <h3 class="h4 mb-0 text-primary">Responsive Design</h3>
+                </div>
+                <p class="card-text">
+                  I ensure your website looks and works perfectly on all
+                  devices:
+                </p>
+                <ul class="list-unstyled">
+                  <li class="mb-2">
+                    <i class="bi bi-check-circle-fill text-primary me-2"></i>
+                    Mobile-first approach
+                  </li>
+                  <li class="mb-2">
+                    <i class="bi bi-check-circle-fill text-primary me-2"></i>
+                    Cross-browser compatibility
+                  </li>
+                  <li class="mb-2">
+                    <i class="bi bi-check-circle-fill text-primary me-2"></i>
+                    Performance optimization
+                  </li>
+                  <li>
+                    <i class="bi bi-check-circle-fill text-primary me-2"></i>
+                    Accessibility standards
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-6">
+            <div class="card service-card h-100">
+              <div class="card-body">
+                <div class="d-flex align-items-center mb-3">
+                  <div class="bg-primary bg-opacity-10 p-3 rounded me-3">
+                    <i class="bi bi-database-fill text-primary fs-4"></i>
+                  </div>
+                  <h3 class="h4 mb-0 text-primary">Backend Development</h3>
+                </div>
+                <p class="card-text">
+                  I build robust backend systems and APIs:
+                </p>
+                <ul class="list-unstyled">
+                  <li class="mb-2">
+                    <i class="bi bi-check-circle-fill text-primary me-2"></i>
+                    RESTful API development
+                  </li>
+                  <li class="mb-2">
+                    <i class="bi bi-check-circle-fill text-primary me-2"></i>
+                    Database design & optimization
+                  </li>
+                  <li class="mb-2">
+                    <i class="bi bi-check-circle-fill text-primary me-2"></i>
+                    Authentication & authorization
+                  </li>
+                  <li>
+                    <i class="bi bi-check-circle-fill text-primary me-2"></i>
+                    Server deployment & maintenance
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="bg-light">
+      <div class="container mt-5 pb-5 ">
+        <h1 class="text-center section-title text-primary p-5">Testimonials</h1>
+
+        <div class="row g-4">
+          <div class="col-lg-4">
+            <div class="card h-100 pb-5">
+              <div class="card-body p-4 testmonial-card">
+                <div class="mb-4">
+                  <i class="bi bi-quote fs-1 text-primary opacity-25"></i>
+                </div>
+                <p class="lead mb-4">
+                  "Ahmad delivered our project ahead of schedule with excellent
+                  quality. His attention to detail and problem-solving skills
+                  are exceptional."
+                </p>
+                <div class="d-flex align-items-center">
+                  <img
+                    src="https://randomuser.me/api/portraits/men/32.jpg"
+                    alt="Client"
+                    class="rounded-circle me-3"
+                    width="50"
+                  />
+                  <div>
+                    <h6 class="mb-0">John Smith</h6>
+                    <small class="text-muted">CEO, TechSolutions</small>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4">
+            <div class="card h-100">
+              <div class="card-body p-4 testmonial-card">
+                <div class="mb-4">
+                  <i class="bi bi-quote fs-1 text-primary opacity-25"></i>
+                </div>
+                <p class="lead mb-4">
+                  "The Figma to React conversion was flawless. Ahmad understood
+                  our design system perfectly and implemented it with
+                  precision."
+                </p>
+                <div class="d-flex align-items-center">
+                  <img
+                    src="https://randomuser.me/api/portraits/women/44.jpg"
+                    alt="Client"
+                    class="rounded-circle me-3"
+                    width="50"
+                  />
+                  <div>
+                    <h6 class="mb-0">Sarah Johnson</h6>
+                    <small class="text-muted">Design Lead, CreativeMinds</small>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4">
+            <div class="card h-100">
+              <div class="card-body p-4 testmonial-card">
+                <div class="mb-4">
+                  <i class="bi bi-quote fs-1 text-primary opacity-25"></i>
+                </div>
+                <p class="lead mb-4">
+                  "Working with Ahmad was a pleasure. He's responsive,
+                  professional, and his code is clean and well-documented.
+                  Highly recommended!"
+                </p>
+                <div class="d-flex align-items-center">
+                  <img
+                    src="https://randomuser.me/api/portraits/men/75.jpg"
+                    alt="Client"
+                    class="rounded-circle me-3"
+                    width="50"
+                  />
+                  <div>
+                    <h6 class="mb-0">Michael Brown</h6>
+                    <small class="text-muted">CTO, StartupX</small>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+      <div class="container mt-5">
+        <h1 class="text-center section-title text-primary">Get In Touch</h1>
+
+        <div class="row g-4">
+          <div class="col-lg-6">
+            <div class="card service-card h-100">
+              <div class="card-body">
+                <h3 class="h4 text-primary mb-4">Contact Information</h3>
+                <ul class="list-unstyled">
+                  
+                  <a href="mailto:ak2085532@gmail.com"
+                  <li class="mb-3">
+                    <div class="d-flex align-items-center">
+                      <div class="bg-primary bg-opacity-10 p-2 rounded me-3">
+                        <i class="bi bi-envelope-fill text-primary"></i>
+                      </div>
+                      <span>ak2085532@gmail.com</span>
+                    </div>
+                  </li></a>
+                  <a href="tel:+92 3241091180"
+                  <li class="mb-3">
+                    <div class="d-flex align-items-center">
+                      <div class="bg-primary bg-opacity-10 p-2 rounded me-3">
+                        <i class="bi bi-phone-fill text-primary"></i>
+                      </div>
+                      <span>+92 3241091180</span>
+                    </div>
+                  </li></a>
+                  <li class="mb-3">
+                    <div class="d-flex align-items-center">
+                      <div class="bg-primary bg-opacity-10 p-2 rounded me-3">
+                        <i class="bi bi-geo-alt-fill text-primary"></i>
+                      </div>
+                      <span>Rawalpindi, Pakistan</span>
+                    </div>
+                  </li>
+                </ul>
+
+                <div class="mt-4">
+                  <h4 class="h5 text-primary mb-3">Follow Me</h4>
+                  <div class="d-flex gap-3">
+                    <a href="#" class="social-icon"
+                      ><i class="bi bi-github"></i
+                    ></a>
+                    <a href="#" class="social-icon"
+                      ><i class="bi bi-linkedin"></i
+                    ></a>
+                    <a href="#" class="social-icon"
+                      ><i class="bi bi-twitter-x"></i
+                    ></a>
+                    <a href="#" class="social-icon"
+                      ><i class="bi bi-instagram"></i
+                    ></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-6">
+            <div class="card service-card h-100">
+              <div class="card-body">
+                <h3 class="h4 text-primary mb-4">Send Me a Message</h3>
+                <form>
+                  <div class="mb-3">
+                    <label for="name" class="form-label">Your Name</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="name"
+                      placeholder="ahmad khan"
+                      required
+                    />
+                  </div>
+                  <div class="mb-3">
+                    <label for="email" class="form-label">Email Address</label>
+                    <input
+                      type="email"
+                      placeholder="ahmad@gmail.com"
+                      class="form-control"
+                      id="email"
+                      required
+                    />
+                  </div>
+                  <div class="mb-3">
+                    <label for="subject" class="form-label">Subject</label>
+                    <input
+                      type="text"
+                      placeholder="purpose"
+                      class="form-control"
+                      id="subject"
+                      required
+                    />
+                  </div>
+                  <div class="mb-3">
+                    <label for="message" class="form-label">Message</label>
+                    <textarea
+                      class="form-control"
+                      id="message"
+                      placeholder="infomation about the project"
+                      rows="4"
+                      required
+                    ></textarea>
+                  </div>
+                  <button type="submit" class="btn btn-primary px-4">
+                    Send Message
+                  </button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-5">
+      <div class="container mt-5">
+        <div class="row">
+          <div class="col-lg-6 mb-4 mb-lg-0">
+            <h3 class="h4 text-white mb-3">AHMAD KHAN</h3>
+            <p class="text-white-50">
+              Full-Stack Developer creating modern web applications with focus
+              on performance, accessibility, and user experience.
+            </p>
+          </div>
+          <div class="col-lg-3 mb-4 mb-lg-0">
+            <h4 class="h5 text-white mb-3">Quick Links</h4>
+            <ul class="list-unstyled">
+              <li class="mb-2">
+                <a href="#home" class="text-white-50 text-decoration-none"
+                  >Home</a
+                >
+              </li>
+              <li class="mb-2">
+                <a href="#skills" class="text-white-50 text-decoration-none"
+                  >Skills</a
+                >
+              </li>
+              <li class="mb-2">
+                <a href="#education" class="text-white-50 text-decoration-none"
+                  >Education</a
+                >
+              </li>
+              <li class="mb-2">
+                <a href="#services" class="text-white-50 text-decoration-none"
+                  >Services</a
+                >
+              </li>
+              <li>
+                <a href="#contact" class="text-white-50 text-decoration-none"
+                  >Contact</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="col-lg-3">
+            <h4 class="h5 text-white mb-3">Connect</h4>
+            <div class="d-flex gap-3">
+              <a href="#" class="text-white-50"
+                ><i class="bi bi-github fs-5"></i
+              ></a>
+              <a href="#" class="text-white-50"
+                ><i class="bi bi-linkedin fs-5"></i
+              ></a>
+              <a href="#" class="text-white-50"
+                ><i class="bi bi-twitter-x fs-5"></i
+              ></a>
+              <a href="#" class="text-white-50"
+                ><i class="bi bi-instagram fs-5"></i
+              ></a>
+            </div>
+          </div>
+        </div>
+        <hr class="my-4 bg-secondary" />
+        <div class="text-center text-white-50">
+          <p class="mb-0">&copy; 2023 Ahmad Khan. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+   
+   
+    <div id="gold-particles-container" class="particles-container"></div>
+   
+
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+  // Navbar scroll effect
+  const navbar = document.querySelector(".navbar");
+  if (navbar) {
+    const toggleNavbarScrolled = () => navbar.classList.toggle("scrolled", window.scrollY > 50);
+    toggleNavbarScrolled();
+    window.addEventListener("scroll", toggleNavbarScrolled);
+  }
+
+  // Back to top button
+  const backToTopButton = document.querySelector(".back-to-top");
+  if (backToTopButton) {
+    const toggleBackToTop = () => backToTopButton.classList.toggle("active", window.scrollY > 300);
+    toggleBackToTop();
+    window.addEventListener("scroll", toggleBackToTop);
+
+    backToTopButton.addEventListener("click", (e) => {
+      e.preventDefault();
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    });
+  }
+
+  // Smooth scrolling for anchor links
+  document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+    anchor.addEventListener("click", function (e) {
+      const targetId = this.getAttribute("href");
+      if (targetId === "#") return;
+
+      e.preventDefault();
+      const target = document.querySelector(targetId);
+      target?.scrollIntoView({ behavior: "smooth" });
+    });
+  });
+
+  // Smooth Typewriter animation
+  const textElement = document.querySelector(".fullstack");
+  if (textElement) {
+    const phrases = [
+      "Full-Stack Developer*",
+      "Web Designer*",
+      "UI/UX Specialist*",
+      "Software Engineer*",
+    ];
+    let phraseIndex = 0,
+      charIndex = 0,
+      isDeleting = false;
+    let typingSpeed = 100,
+      deleteSpeed = 50,
+      pauseBetweenPhrases = 1000;
+
+    function typeWriter() {
+      const currentPhrase = phrases[phraseIndex];
+
+      // Calculate dynamic speed for more natural typing
+      const baseTypingSpeed = Math.random() * 50 + 50; // Randomize between 50-100ms
+      const baseDeleteSpeed = Math.random() * 30 + 30; // Randomize between 30-60ms
+
+      // Display the current text
+      textElement.textContent = isDeleting
+        ? currentPhrase.substring(0, charIndex--)
+        : currentPhrase.substring(0, charIndex++);
+
+      // Smooth speed transitions
+      if (!isDeleting) {
+        // Typing phase
+        typingSpeed = charIndex % 3 === 0 ? baseTypingSpeed * 1.7 : baseTypingSpeed;
+
+        if (charIndex === currentPhrase.length) {
+          // Pause at end of phrase
+          typingSpeed = pauseBetweenPhrases;
+          isDeleting = true;
+        }
+      } else {
+        // Deleting phase
+        typingSpeed = baseDeleteSpeed;
+
+        if (charIndex === 0) {
+          isDeleting = false;
+          phraseIndex = (phraseIndex + 1) % phrases.length;
+          // Pause before starting next phrase
+          typingSpeed = 300;
+        }
+      }
+
+      // Use requestAnimationFrame for smoother animation
+      setTimeout(typeWriter, typingSpeed);
+    }
+
+    // Start with empty string and begin animation
+    textElement.textContent = "";
+    setTimeout(typeWriter, 500);
+  }
+
+  // Gold particle animation
+  const container = document.querySelector(".particles-container");
+  if (container) {
+    for (let i = 0; i < 50; i++) {
+      const particle = document.createElement("div");
+      particle.className = "gold-particle";
+
+      // Random horizontal position (0% to 100%)
+      const randomX = Math.random();
+      particle.style.setProperty("--random-x", randomX);
+
+      // Random delay (0s to 30s)
+      particle.style.animationDelay = `${Math.random() * 10}s`;
+
+      // Random size (3px to 8px)
+      const size = Math.random() * 5 + 3;
+      particle.style.width = `${size}px`;
+      particle.style.height = `${size}px`;
+
+      container.appendChild(particle);
+    }
+
+  }
+  document.getElementById('downloadBtn').addEventListener('click', function(e) {
+  e.preventDefault(); // Prevent default link behavior
+  
+  const originalText = this.innerHTML;
+  const icon = '<i class="bi bi-download ms-2"></i>';
+  let percent = 0;
+  
+  // Change to downloading state
+  this.innerHTML = `Downloading ${percent}% ${icon}`;
+  this.classList.add('disabled'); // Optional: disable button during download
+  
+  // Simulate download progress
+  const interval = setInterval(() => {
+    percent += 1;
+    this.innerHTML = `Downloading ${percent}% ${icon}`;
+    
+    if (percent >= 99) {
+      clearInterval(interval);
+      
+      // After reaching 99%, reset to original (or you could complete to 100%)
+      setTimeout(() => {
+        this.innerHTML = originalText;
+        this.classList.remove('disabled');
+        
+        // Here you would actually trigger the download
+        window.location.href = 'path/to/your-cv.pdf';
+      }, 500);
+    }
+  }, 30); // Adjust speed as needed
+});
+});
+
+</script>
+
+ 
+
+    
+     
+  </body>
+</html>
